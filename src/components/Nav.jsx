@@ -1,19 +1,13 @@
-function Nav() {
+function Nav({ data }) {
   return (
     <nav>
+      {/* 3단계 메뉴 목록 출력 */}
       <ul>
-        <li>
-          <a href=''>work 1</a>
-        </li>
-        <li>
-          <a href=''>work 2</a>
-        </li>
-        <li>
-          <a href=''>work 3</a>
-        </li>
-        <li>
-          <a href=''>work 4</a>
-        </li>
+        {data.map((work) => (
+          <li key={work.id}>
+            <a href=''>{work.title}</a>
+          </li>
+        ))}
       </ul>
     </nav>
   );
