@@ -1,8 +1,9 @@
-function Figure({ data }) {
+function Figure({ url, desc, data }) {
   return (
     <figure>
-      <img alt='img-1' src='portfolio_dist/images/img-1.jpg' />
-      <figcaption>Work 1 description</figcaption>
+      {/* 7단계 Figure에서 이미지/설명 출력 */}
+      <img alt='img-1' src={url} />
+      <figcaption>{desc}</figcaption>
     </figure>
   );
 }
