@@ -12,7 +12,17 @@ function Nav({ data, onChangeMode }) {
               onChangeMode(work.id);
             }}
           >
-            <a href=''>{work.title}</a>
+            {/* 선택 미션 - 버튼으로 바꾸기  */}
+            <button
+              type='button'
+              onClick={(e) => {
+                e.preventDefault();
+                onChangeMode(work.id);
+              }}
+            >
+              {work.title}
+            </button>
+            {/* <a href=''>{work.title}</a> */}
           </li>
         ))}
       </ul>

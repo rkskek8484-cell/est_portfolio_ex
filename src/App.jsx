@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header.jsx';
 import Nav from './components/Nav.jsx';
 import Figure from './components/Figure.jsx';
+import { Routes, Route } from 'react-router';
 
 function App() {
   // 4단계 선택 상태(useState) 만들기
