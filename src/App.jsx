@@ -19,8 +19,8 @@ function App() {
   return (
     <>
       <Header />
-      <Nav data={works} />
-      <Figure />
+      <Nav data={works} onChangeMode={(id) => setId(id)} />
+      <Figure data={work} />
     </>
   );
 }

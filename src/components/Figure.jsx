@@ -1,4 +1,4 @@
-function Figure() {
+function Figure({ data }) {
   return (
     <figure>
       <img alt='img-1' src='portfolio_dist/images/img-1.jpg' />
