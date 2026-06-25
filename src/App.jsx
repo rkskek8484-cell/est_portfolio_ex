@@ -11,10 +11,10 @@ function App() {
 
   // 2단계 works 데이터 준비
   const works = [
-    { id: 1, title: 'work 1', url: 'portfolio_dist/images/img-1.jpg', desc: 'Work 1 description' },
-    { id: 2, title: 'work 2', url: 'portfolio_dist/images/img-2.jpg', desc: 'Work 2 description' },
-    { id: 3, title: 'work 3', url: 'portfolio_dist/images/img-3.jpg', desc: 'Work 3 description' },
-    { id: 4, title: 'work 4', url: 'portfolio_dist/images/img-4.jpg', desc: 'Work 4 description' },
+    { id: 1, title: 'work 1', url: '/img-1.jpg', desc: 'Work 1 description' },
+    { id: 2, title: 'work 2', url: '/img-2.jpg', desc: 'Work 2 description' },
+    { id: 3, title: 'work 3', url: '/img-3.jpg', desc: 'Work 3 description' },
+    { id: 4, title: 'work 4', url: '/img-4.jpg', desc: 'Work 4 description' },
   ];
 
   // 6단계 선택된 id와 일치하는 작품 찾기
