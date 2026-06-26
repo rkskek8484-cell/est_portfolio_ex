@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header.jsx';
 import Nav from './components/Nav.jsx';
 import Figure from './components/Figure.jsx';
-import { Routes, Route } from 'react-router';
+import Controls from './components/Controls.jsx';
 
 function App() {
   // 4단계 선택 상태(useState) 만들기
@@ -19,13 +19,23 @@ function App() {
 
   // 6단계 선택된 id와 일치하는 작품 찾기
   const selectWork = works.find((w) => w.id === id);
+  const activeIndex = works.findIndex((w) => w.id === id);
+  const prevWork = activeIndex > 0 ? works[activeIndex - 1] : null;
+  const nextWork = activeIndex < works.length - 1 ? works[activeIndex + 1] : null;
 
   return (
     <>
       <Header />
-      <Nav data={works} onChangeMode={(id) => setId(id)} />
+      <Nav data={works} activeId={id} onChangeMode={(_id) => setId(_id)} />
       {/* 8단계 예외 처리  */}
       {selectWork && <Figure data={selectWork} url={selectWork.url} desc={selectWork.desc} />}
+      <Controls
+        prevWork={prevWork}
+        nextWork={nextWork}
+        onChangeMode={(_id) => {
+          setId(_id);
+        }}
+      />
     </>
   );
 }
